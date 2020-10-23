@@ -2,6 +2,43 @@
  /* 1. Menu and navbar */
  /* 2. Header */
  /* 3. Media queries */
+
+/* 1. Fonts, images */
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+.hero-text {
+  color: white;
+}
+
+.recommend-text {
+  font-size: 26;
+  color: #3a3a3a;
+}
+
+
  
  /* 1. MENU & NAVBAR */
  /* Add a black background color to the top navigation */
@@ -93,16 +130,16 @@
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
+  .info {
+    background-color: #fff5f0;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 300px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 
-  .hero-text {
-    font-size: 26;
-    color: white;
-  }
 
-  .recommend-text {
-    font-size: 26;
-    color: #dda146;
-  }
 
 
  /* 4. MEDIA QUERIES */
