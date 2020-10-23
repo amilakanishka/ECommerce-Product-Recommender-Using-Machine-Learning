@@ -13,10 +13,11 @@
   .topnav a {
     height: 70px;
     display: inline-block;
-    color: #ca8d23;
+    color: #dda146;
     text-align: center;
-    padding: 15px 15px;
+    padding: 17px 17px;
     font-size: 20px;
+    margin-left: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 18px; 
@@ -31,7 +32,7 @@
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: #ca8d23;
+    background-color: #dda146;
     color: white;
   }
   
@@ -51,21 +52,58 @@
     transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
 
-  /* 3. HERO SECTION */
+  /* 3. SECTIONS */
   .hero1 {
     background-image: url(../img/bar2.png);
     padding-top: 80px;
     padding-bottom: 50px;
-    height: 600px;
+    height: 700px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
+  .order {
+    background-color: #3a3a3a;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 500px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .recommend {
+    background-color: #fff5f0;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 500px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .thanks {
+    background-color: #dda146;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 500px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+
   .hero-text {
     font-size: 26;
     color: white;
   }
+
+  .recommend-text {
+    font-size: 26;
+    color: #dda146;
+  }
+
 
  /* 4. MEDIA QUERIES */
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
