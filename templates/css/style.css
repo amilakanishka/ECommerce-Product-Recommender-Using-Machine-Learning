@@ -11,11 +11,11 @@
   
   /* Style the links inside the navigation bar */
   .topnav a {
-    height: 80px;
+    height: 70px;
     display: inline-block;
-    color: #dda146;
+    color: #ca8d23;
     text-align: center;
-    padding: 20px 20px;
+    padding: 15px 15px;
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -31,7 +31,7 @@
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: #dda146;
+    background-color: #ca8d23;
     color: white;
   }
   
@@ -42,8 +42,8 @@
 
   /* 2. HEADER STYLE */
   #header {
-    background-color: #f1f1f1; /* Grey background */
-    padding: 10px 10px; /* Some padding */
+    background-color: #fff5f0; /* Grey background */
+    padding: 20px 20px; /* Some padding */
     color: black;
     position: fixed; /* Fixed position - sit on top of the page */
     top: 0;
@@ -51,7 +51,23 @@
     transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
 
- /* 3. MEDIA QUERIES */
+  /* 3. HERO SECTION */
+  .hero1 {
+    background-image: url(../img/bar2.png);
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 600px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .hero-text {
+    font-size: 26;
+    color: white;
+  }
+
+ /* 4. MEDIA QUERIES */
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
   Show the link that contains should open and close the topnav (.icon) */
  @media screen and (max-width: 600px) {
