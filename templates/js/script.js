@@ -18,3 +18,8 @@ function scrollFunction() {
     document.getElementById("header").style.fontSize = "90px";
   }
 } 
+
+//  Add smooth scrolling on button clicks
+function scrollWin() {
+  window.scrollBy(0, 600);
+}
