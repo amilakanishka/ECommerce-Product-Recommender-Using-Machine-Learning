@@ -35,6 +35,7 @@ Store_Details = Base.classes.store_details
 def home():
     session = Session(engine)
     storeResults = session.query(Store_Details.store_number,Store_Details.store_name).all()
+    prodCatResutls = session.query(Product_Catogory.category, Product_Catogory.category_name).all()
     session.close()
     storeList = []    
     for store_number,store_name in storeResults:
@@ -44,7 +45,17 @@ def home():
 
         storeList.append(store)
 
-    return render_template("index.html",storeList=storeList)
+    prodCatList = []
+    for category, category_name in prodCatResutls:
+        cate = {}
+        cate["category"] = category
+        cate["category_name"] = category_name             
+        prodCatList.append(cate)   
+
+    product_list = []
+    prodDetailList = get_product_details(product_list)        
+
+    return render_template("index.html",storeList=storeList, prodCatList=prodCatList, prodDetailList=prodDetailList)
 
 @app.route("/get_recommendations", methods=['GET'])
 def get_recommendations():
@@ -61,8 +72,12 @@ def get_recommendations_for_store(store_id):
     return jsonify(data)    
 
 def get_product_details(product_list):
-    session = Session(engine)    
-    results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category,Product_Items.item_number.in_([76036, 86310,26613]) ).all()          
+    session = Session(engine) 
+    results = None
+    if len(product_list) == 0:
+        results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category).all()          
+    else:
+        results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category,Product_Items.item_number.in_([76036, 86310,26613]) ).all()          
     session.close()    
 
     productsRec = []
