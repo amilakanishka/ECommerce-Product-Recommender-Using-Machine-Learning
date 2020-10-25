@@ -10,9 +10,8 @@ function handleSubmit() {
   var productSelection = d3.select("#product_category").node().value;
   var product_name = d3.select("#product_name").node().value;
 
-  var url = `/get_recommendations_for_store/${customerSelection}/${productSelection}/${product_name}`;
+  var url = `/get_recommendations_for_store/${customerSelection}`;
   d3.json(url).then(function(data) {
-    renderMap(data,stateSelection);
     renderWeekday(data);
     renderJobTable(data,stateSelection,roleSelection);
   });

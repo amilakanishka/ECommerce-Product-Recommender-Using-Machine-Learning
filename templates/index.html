@@ -93,29 +93,43 @@
             <div class="card-deck">
                 <div class="card">
                     <h5>Customer ID</h5>
-                    <input class="form-control input" id="myInputID" type="search" onkeyup="myCustomerFunction()" placeholder="Customer ID" autocomplete="off">
-                        <select id="customer_name">
+                    <div class="select-list">
+                      <div class="select-list-item"> 
+                        <select name="store_number" id="customer_name">
                             {% for s in storeList %}
                             <option value="{{ s }}">{{ s }}</option>
                             {% endfor %}
                         </select>
                 </div>  
+
+                <!-- <div class="card">
+                    <h5>Customer ID</h5>
+                    <input class="form-control input" id="myInputID" type="search" onkeyup="mySToreFunction()" placeholder="Customer ID" autocomplete="off">
+                        <select id="customer_name">
+                            {% for s in storeList %}
+                            <option value="{{ s }}">{{ s }}</option>
+                            {% endfor %}
+                        </select>
+                </div>   -->
+
         
                 <div class="card">
                     <h5>Product Category</h5>
                     <input class="form-control" id="myInputCategory" type="search" placeholder="Product Category" autocomplete="on">
                         <select id="product_category">
-                            {% for s in storeList %}
-                            <option value="{{ s }}">{{ s }}</option>
+                            {% for p in prodCat %}
+                            <option value="{{ p }}">{{ p }}</option>
                             {% endfor %}
                             <!-- Check this bit -  -->
-                        </div>
-                </div> 
+                        </select>
+                    </div>
+                <!-- </div>  -->
 
                 <div class="card">
                     <h5>Product Name</h5>
                     <input class="form-control" id="myInputProduct" type="search" placeholder="Product Name" autocomplete="on">
                         <div id="product_name">
+                        
                         </div>
                 </div> 
                 
