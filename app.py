@@ -88,10 +88,10 @@ def get_product_categories():
 
     prodCat = []
     for category, category_name in results:
-        category = {}
-        category["category"] = category
-        category["category_name"] = category_name             
-        prodCat.append(category)    
+        cate = {}
+        cate["category"] = category
+        cate["category_name"] = category_name             
+        prodCat.append(cate)    
 
     return jsonify(prodCat)       
 
