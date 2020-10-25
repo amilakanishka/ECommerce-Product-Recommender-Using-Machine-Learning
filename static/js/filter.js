@@ -1,4 +1,4 @@
-function myCustomerFunction() {
+function myStoreFunction() {
   var input, filter, table, tr, td, x;
   input = document.getElementById("UserInput");
   filter = input.value.toLowerCase();
