@@ -45,7 +45,7 @@ def home():
         store["city"] = city
         storeList.append(store)
 
-    return render_template("index.html",storedata=storeList)
+    return render_template("index.html",storeList=storeList)
 
 @app.route("/get_recommendations", methods=['GET'])
 def get_recommendations():
@@ -54,8 +54,8 @@ def get_recommendations():
     data = get_product_details(prod_list)
     return jsonify(data)
 
-@app.route("/get_recommendations_for_sore/<store_id>", methods=['GET'])
-def get_recommendations_for_sore(store_id):
+@app.route("/get_recommendations_for_store/<store_id>", methods=['GET'])
+def get_recommendations_for_store(store_id):
     # call the model and get the recommendations  for user_id
     prod_list = []
     data = get_product_details(prod_list)
