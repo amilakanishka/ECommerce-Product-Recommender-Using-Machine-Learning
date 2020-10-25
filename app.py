@@ -79,7 +79,22 @@ def get_product_details(product_list):
         product["category_name"] = category_name            
         productsRec.append(product)    
 
-    return productsRec      
+    return productsRec  
+
+@app.route("/get_product_categories", methods=['GET'])
+def get_product_categories():
+    session = Session(engine)    
+    results = session.query(Product_Catogory.category, Product_Catogory.category_name).all()          
+    session.close()    
+
+    prodCat = []
+    for category, category_name in results:
+        category = {}
+        category["category"] = category
+        category["category_name"] = category_name             
+        prodCat.append(category)    
+
+    return jsonify(prodCat)       
 
 @app.route("/team")
 def team():
