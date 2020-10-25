@@ -37,7 +37,7 @@ def home():
     storeResults = session.query(Store_Details.store_number,Store_Details.store_name).all()
     session.close()
     storeList = []    
-    for store_number,store_name,address,city in storeResults:
+    for store_number,store_name in storeResults:
         store = {}
         store["store_number"] = store_number
         store["store_name"] = store_name
