@@ -24,6 +24,7 @@ function scrollWin() {
   window.scrollTo(0, 800);
 }
 
+// Filtering cards
 // Select Customer
 $(document).ready(function(){
   $("#myInputID").on("keyup", function() {
@@ -54,12 +55,27 @@ $(document).ready(function(){
   });
 });
 
-// Select Quantity
-$(document).ready(function(){
-  $("#myInputQuantity").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#quantity *").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
+// 
+
+// https://www.w3schools.com/howto/howto_js_filter_table.asp 
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toLowerCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
