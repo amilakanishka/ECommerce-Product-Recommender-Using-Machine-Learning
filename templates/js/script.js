@@ -21,5 +21,45 @@ function scrollFunction() {
 
 //  Add smooth scrolling on button clicks
 function scrollWin() {
-  window.scrollBy(0, 600);
+  window.scrollTo(0, 800);
 }
+
+// Select Customer
+$(document).ready(function(){
+  $("#myInputID").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#customer_ID *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+// Select Category
+$(document).ready(function(){
+  $("#myInputCategory").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#product_category *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+// Select Product
+$(document).ready(function(){
+  $("#myInputProduct").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#product_name *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+// Select Quantity
+$(document).ready(function(){
+  $("#myInputQuantity").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#quantity *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
