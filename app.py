@@ -34,15 +34,14 @@ Store_Details = Base.classes.store_details
 @app.route("/")
 def home():
     session = Session(engine)
-    storeResults = session.query(Store_Details.store_number,Store_Details.store_name,Store_Details.address, Store_Details.city).all()
+    storeResults = session.query(Store_Details.store_number,Store_Details.store_name).all()
     session.close()
     storeList = []    
     for store_number,store_name,address,city in storeResults:
         store = {}
         store["store_number"] = store_number
         store["store_name"] = store_name
-        store["address"] = address
-        store["city"] = city
+
         storeList.append(store)
 
     return render_template("index.html",storeList=storeList)
