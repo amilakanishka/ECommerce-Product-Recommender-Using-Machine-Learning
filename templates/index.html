@@ -93,8 +93,9 @@
             <div class="card-deck">
                 <div class="card">
                     <h5>Customer ID</h5>
-                    <input class="form-control input" id="myInputID" type="search" placeholder="Customer ID" autocomplete="off">
-                        <select id="customer_name">
+                    <div class="select-list">
+                      <div class="select-list-item"> 
+                        <select name="store_number" id="customer_name">
                             {% for s in storeList %}
                             <option value="{{ s }}">{{ s }}</option>
                             {% endfor %}
