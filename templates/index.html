@@ -64,7 +64,7 @@
                         <h1>Scikick Iowa Alcohol Distributors</h1>
                         <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
 
-                        <h2>Creating Fun Memories Together!<br><br></h2>
+                        <h2>Creating Memories Together!<br><br></h2>
                         
                         <button onclick="scrollWin()" class="button button1">Order Now</button>
                     </div>
@@ -94,14 +94,21 @@
                 <div class="card">
                     <h5>Customer ID</h5>
                     <input class="form-control input" id="myInputID" type="search" onkeyup="myCustomerFunction()" placeholder="Customer ID" autocomplete="off">
-                        <div id="customer_name">
-                        </div>
+                        <select id="customer_name">
+                            {% for s in storeList %}
+                            <option value="{{ s }}">{{ s }}</option>
+                            {% endfor %}
+                        </select>
                 </div>  
         
                 <div class="card">
                     <h5>Product Category</h5>
                     <input class="form-control" id="myInputCategory" type="search" placeholder="Product Category" autocomplete="on">
-                        <div id="product_category">
+                        <select id="product_category">
+                            {% for s in storeList %}
+                            <option value="{{ s }}">{{ s }}</option>
+                            {% endfor %}
+                            <!-- Check this bit -  -->
                         </div>
                 </div> 
 
