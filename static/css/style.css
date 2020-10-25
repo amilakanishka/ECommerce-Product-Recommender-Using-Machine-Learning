@@ -158,7 +158,6 @@ h6 {
   .button1 {
     background-color: #dda146; 
     color: white; 
-    /* border: 2px solid #a8aaa8; */
   }
 
   .button1:hover {
@@ -183,12 +182,24 @@ h6 {
   .button2 {
     background-color: #dda146; 
     color: white; 
-    /* border: 2px solid #a8aaa8; */
-  }
+    }
 
   .button2:hover {
     background-color: #ddd;
     color: black;
+  }
+
+  /* XXX. CARD STYLING */
+
+  .card {
+    background-color: #ddd;
+    padding: 2px 2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.5s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
 
 
