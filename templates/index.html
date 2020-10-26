@@ -118,7 +118,7 @@
                     <input class="form-control" id="myInputCategory" type="search" placeholder="Product Category" autocomplete="on">
                         <select id="product_category">
                             {% for p in prodCat %}
-                            <option value="{{ p }}">{{ p }}</option>
+                            <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
                             {% endfor %}
                             <!-- Check this bit -  -->
                         </select>
