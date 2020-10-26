@@ -189,6 +189,12 @@ h6 {
     color: black;
   }
 
+  .card-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+
   /* XXX. CARD STYLING */
 
   .card {
