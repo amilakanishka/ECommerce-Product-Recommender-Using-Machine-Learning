@@ -16,6 +16,7 @@ function handleSubmit() {
   });
 }
 
+// Rendering the machine learned products XXXXXXXXX fix line 23 and 24
 function renderProdRecTable(prodListing){
   d3.select("#recommend-product").selectAll("div").remove();
   var url = `/get_recommendations/${customerSelection}/${productSelection}/${productName}`;
