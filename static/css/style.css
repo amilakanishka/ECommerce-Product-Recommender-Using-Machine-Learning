@@ -113,7 +113,7 @@ h6 {
     background-color: #fff5f0;
     padding-top: 80px;
     padding-bottom: 50px;
-    height: 500px;
+    min-height: 500px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -122,8 +122,8 @@ h6 {
   .thanks {
     background-color: #dda146;
     padding-top: 80px;
-    padding-bottom: 50px;
-    height: 500px;
+    padding-bottom: 80px;
+    min-height: 300px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -189,10 +189,6 @@ h6 {
     color: black;
   }
 
-  .card-btn {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
 
 
   /* XXX. CARD STYLING */
@@ -207,6 +203,18 @@ h6 {
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
+
+  .card-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+select {
+  border-radius: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
 
 
  /* XXX. MEDIA QUERIES */
