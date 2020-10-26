@@ -8,9 +8,9 @@ function handleSubmit() {
   // Select the input value from the form
   var customerSelection = d3.select("#customer_name").node().value;
   var productSelection = d3.select("#product_category").node().value;
-  var product_name = d3.select("#product_name").node().value;
+  var productName = d3.select("#product_name").node().value;
 
-  var url = `/get_recommendations_for_store/${customerSelection}`;
+  var url = `/get_recommendations_for_store/${customerSelection}/${productSelection}/${productName}`;
   d3.json(url).then(function(data) {
     renderWeekday(data);
     renderJobTable(data,stateSelection,roleSelection);
