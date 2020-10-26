@@ -97,7 +97,7 @@
                       <div class="select-list-item"> 
                         <select name="store_number" id="customer_name">
                             {% for s in storeList %}
-                            <option value="{{ s }}">{{ s }}</option>
+                            <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
                             {% endfor %}
                         </select>
                       </div>
@@ -132,7 +132,7 @@
                     <input class="form-control" id="myInputProduct" type="search" placeholder="Product Name" autocomplete="on">
                     <select id="product_name">
                         {% for r in prodDetailList %}
-                        <option value="{{ r }}">{{ r }}</option>
+                        <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
                         {% endfor %}
                         <!-- Check this bit -  -->
                     </select>
