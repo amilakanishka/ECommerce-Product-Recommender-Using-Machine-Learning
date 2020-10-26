@@ -189,10 +189,6 @@ h6 {
     color: black;
   }
 
-  .card-btn {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
 
 
   /* XXX. CARD STYLING */
@@ -207,6 +203,18 @@ h6 {
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
+
+  .card-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+select {
+  border-radius: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
 
 
  /* XXX. MEDIA QUERIES */
