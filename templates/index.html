@@ -129,7 +129,7 @@
 
                 <div class="card">
                     <h5>Product Name</h5>
-                    <input class="form-control" id="inputProduct" type="text" onkeyup="myProductFunction" placeholder="Product Name" autocomplete="on">
+                    <input id="inputProduct" type="text" onkeyup="myProductFunction" placeholder="Product Name" autocomplete="on">
                     <select id="product_name">
                         {% for r in prodDetailList %}
                         <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
