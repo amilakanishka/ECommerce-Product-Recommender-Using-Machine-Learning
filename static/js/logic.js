@@ -1,5 +1,4 @@
 d3.select("#submit").on("click", handleSubmit);
-// var myMap = null;
 
 function handleSubmit() {
   // Prevent the page from refreshing
@@ -77,31 +76,31 @@ function renderProdRecTable(prodListing){
   };
 
 // Dynamic product search
-function myProductFunction() {
-  var input, filter, table, selProd, filtProd, x;
-  input = document.getElementById("inputProduct");
-  filter = input.value.toLowerCase();
-  table = document.getElementById("productName");
-  selProd = document.getElementById("product_name").value;
+// function myProductFunction() {
+//   var input, filter, table, selProd, filtProd, x;
+//   input = document.getElementById("inputProduct");
+//   filter = input.value.toLowerCase();
+//   table = document.getElementById("productName");
+//   selProd = document.getElementById("product_name").value;
 
-  for (x = 0; x < selProd.length; x++) {
-    filtProd = selProd[x].getElementsByTagName("option")[0];
-    if (filtProd) {
-      if (filtProd.innerHTML.toLowerCase().indexOf(filter) > -1) {
-        selProd[x].style.display = "";
-      }
-      else {
-        selProd[x].style.display = "none";
-      }
-    }
-  }
-}
+//   for (x = 0; x < selProd.length; x++) {
+//     filtProd = selProd[x].getElementsByTagName("option")[0];
+//     if (filtProd) {
+//       if (filtProd.innerHTML.toLowerCase().indexOf(filter) > -1) {
+//         selProd[x].style.display = "";
+//       }
+//       else {
+//         selProd[x].style.display = "none";
+//       }
+//     }
+//   }
+// }
 
-$(document).ready(function(){
-  $("#product_name").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#prodDiv *").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+document.querySelector(document).ready(function(){
+  document.querySelector("#product_name").addEventListener("keyup", function() {
+    var value = document.querySelector(this).value.toLowerCase();
+    document.querySelector("#prodDiv *").filter(function() {
+      document.querySelector(this).toggle(document.querySelector(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
-});
+})
