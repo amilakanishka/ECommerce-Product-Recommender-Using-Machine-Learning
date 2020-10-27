@@ -109,9 +109,9 @@ h6 {
 
   .hero2 {
     background-image: url(../img/bar1.png);
-    padding-top: 130px;
+    padding-top: 80px;
     padding-bottom: 50px;
-    height: 700px;
+    height: 500px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
