@@ -71,6 +71,8 @@ function renderProdRecTable(prodListing){
     // Then append the whole thing onto the test section
     document.getElementById('recommend-product').appendChild(containerDiv);
 
+    
+
   };
 
 function myProductFunction() {
