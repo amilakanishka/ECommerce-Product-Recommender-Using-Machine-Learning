@@ -116,7 +116,19 @@ def get_product_categories():
         cate["category_name"] = category_name             
         prodCat.append(cate)    
 
-    return jsonify(prodCat)       
+    return jsonify(prodCat)  
+
+@app.route("/get_recommendations_for_product_selection/<int:item_id>", methods=['GET'])
+def get_recommendations_for_product_selection(item_id):
+
+    item_selected = tc.SArray([item_id])
+    data1 = modelC.recommend_from_interactions(item_selected)
+    prod_list = []
+    for prod in list(data1):
+        prod_list.append(prod['StockCode'])
+    
+    data = get_product_details(prod_list)
+    return jsonify(data)          
 
 @app.route("/team")
 def team():
