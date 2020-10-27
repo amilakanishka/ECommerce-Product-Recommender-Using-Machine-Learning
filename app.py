@@ -74,7 +74,7 @@ def get_recommendations_for_store(store_id):
     data1 = modelC.recommend(users_to_recommend)
     prod_list = []
     data = get_product_details(prod_list)
-    return jsonify(data)    
+    return jsonify(data1)    
 
 def get_product_details(product_list):
     session = Session(engine) 
