@@ -73,8 +73,11 @@ def get_recommendations_for_store(store_id):
     users_to_recommend = tc.SArray([store_id])
     data1 = modelC.recommend(users_to_recommend)
     prod_list = []
+    for prod in list(data1):
+        prod_list.append(prod['StockCode'])
+    
     data = get_product_details(prod_list)
-    return jsonify(list(data1))    
+    return jsonify(prod_list)    
 
 def get_product_details(product_list):
     session = Session(engine) 
