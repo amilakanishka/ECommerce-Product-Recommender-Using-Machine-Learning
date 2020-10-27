@@ -82,7 +82,7 @@ function myProductFunction() {
   input = document.getElementById("inputProduct");
   filter = input.value.toLowerCase();
   table = document.getElementById("productName");
-  selProd = table.getElementsByTagName("option");
+  selProd = document.getElementById("product_name").value;
 
   for (x = 0; x < selProd.length; x++) {
     filtProd = selProd[x].getElementsByTagName("option")[0];
