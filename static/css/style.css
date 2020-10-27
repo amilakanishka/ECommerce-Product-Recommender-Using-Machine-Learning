@@ -34,6 +34,10 @@ h6 {
   color: white;
 }
 
+.team-text {
+  color: #3a3a3a;
+}
+
 .recommend-text {
   font-size: 26;
   color: #3a3a3a;
@@ -79,7 +83,7 @@ h6 {
 
   /* 3. HEADER STYLE */
   #header {
-    background-color: #fff5f0; /* Grey background */
+    background-color: #fff5f0; /* Background Colour */
     padding: 20px 20px; /* Some padding */
     color: black;
     position: fixed; /* Fixed position - sit on top of the page */
@@ -100,7 +104,7 @@ h6 {
   }
 
   .hero2 {
-    background-image: url(../img/wine2.jpg);
+    background-image: url(../img/bar1.jpg);
     padding-top: 80px;
     padding-bottom: 50px;
     height: 700px;
