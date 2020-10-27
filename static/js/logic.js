@@ -1,8 +1,8 @@
-// d3.select("#submit").on("click", handleSubmit);
+d3.select("#submit").on("click", handleSubmit);
 
-// function handleSubmit() {
-//   // Prevent the page from refreshing
-//   d3.event.preventDefault();
+function handleSubmit() {
+  // Prevent the page from refreshing
+  d3.event.preventDefault();
 
 //   // Select the input value from the form
 //   var customerSelection = d3.select("#customer_name").node().value;
