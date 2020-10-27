@@ -11,7 +11,7 @@ from flask import Flask, request, jsonify, render_template, redirect
 import turicreate as tc
 
 # MODEL_PATH = '/mo'
-modelC = tc.load_model("drinkupiowa-C")
+# modelC = tc.load_model("drinkupiowa-C")
 
 app = Flask(__name__)
 
@@ -70,9 +70,9 @@ def get_recommendations():
 @app.route("/get_recommendations_for_store/<int:store_id>", methods=['GET'])
 def get_recommendations_for_store(store_id):
 
-    users_to_recommend = tc.SArray([store_id])
-    data= modelC.recommend(users_to_recommend)
-    print(data)
+    # users_to_recommend = tc.SArray([store_id])
+    # data= modelC.recommend(users_to_recommend)
+    # print(data)
     prod_list = []
     data = get_product_details(prod_list)
     return jsonify(data)    
