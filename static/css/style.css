@@ -319,14 +319,14 @@ h6 {
 
 /* Test CSS for Product Name */
 
-#productUL {
+#prodDiv {
   /* Remove default list styling */
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#productUL option {
+#prodDiv option {
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
@@ -337,6 +337,6 @@ h6 {
   display: block; /* Make it into a block element to fill the whole list */
 }
 
-#productUL option:hover:not(.header) {
+#prodDiv option:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
