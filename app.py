@@ -77,7 +77,7 @@ def get_recommendations_for_store(store_id):
         prod_list.append(prod['StockCode'])
     
     data = get_product_details(prod_list)
-    return jsonify(prod_list)    
+    return jsonify(data)    
 
 def get_product_details(product_list):
     session = Session(engine) 
@@ -85,7 +85,7 @@ def get_product_details(product_list):
     if len(product_list) == 0:
         results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category).all()          
     else:
-        results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category,Product_Items.item_number.in_([76036, 86310,26613]) ).all()          
+        results = session.query(Product_Items.item_number, Product_Items.item_description, Product_Items.category, Product_Items.cost, Product_Items.price, Product_Items.volume, Product_Items.image_url, Product_Catogory.category_name).filter(Product_Catogory.category == Product_Items.category,Product_Items.item_number.in_(product_list)).all()          
     session.close()    
 
     productsRec = []
