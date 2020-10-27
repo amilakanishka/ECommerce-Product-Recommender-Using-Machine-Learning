@@ -120,10 +120,10 @@
                     <h5>Product Category</h5>
                     <input class="form-control" id="myInputCategory" type="search" placeholder="Product Category" autocomplete="on">
                         <select id="product_category">
-                            {% for p in prodCatList %}
-                            <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
-                            {% endfor %}
-                            <!-- Check this bit -  -->
+                                {% for p in prodCatList %}
+                                <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
+                                {% endfor %}
+                                <!-- Check this bit -  -->
                         </select>
                     </div>
                 <!-- </div>  -->
@@ -133,9 +133,11 @@
                     <input id="product_name" type="text" placeholder="Product Name" autocomplete="on" required="required">
                         <div id="prodDiv">
                     <!-- <select id="product_name"> -->
-                        {% for r in prodDetailList %}
-                        <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
-                        {% endfor %}
+                            <ul id="productUL">
+                                {% for r in prodDetailList %}
+                                <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
+                                {% endfor %}
+                            </ul>
                         </div>  
                         <!-- Check this bit -  -->
                     <!-- </select> -->
