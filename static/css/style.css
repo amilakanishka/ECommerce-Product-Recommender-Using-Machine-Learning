@@ -256,6 +256,16 @@ select {
   font-size: 16px;
 }
 
+/* TEAM PHOTO STYLING */
+
+.img-team{
+  padding-top: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
 
  /* XXX. MEDIA QUERIES */
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
