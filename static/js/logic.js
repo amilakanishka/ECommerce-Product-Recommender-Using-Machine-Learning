@@ -13,7 +13,7 @@ function handleSubmit() {
   var url = `/get_recommendations/${customerSelection}/${productSelection}/${productName}`;
   d3.json(url).then(function(data) {
     renderProdRecTable(data,customerSelection,productSelection,productName);
-    myProductFunction(data, prodDetailList)
+    myProductFunction(data, productName)
   });
 }
 
@@ -96,3 +96,12 @@ function myProductFunction() {
     }
   }
 }
+
+$(document).ready(function(){
+  $("#product_name").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#prodDiv *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
