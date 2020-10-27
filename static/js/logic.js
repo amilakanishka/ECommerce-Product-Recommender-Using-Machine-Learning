@@ -13,6 +13,7 @@ function handleSubmit() {
   var url = `/get_recommendations/${customerSelection}/${productSelection}/${productName}`;
   d3.json(url).then(function(data) {
     renderProdRecTable(data,customerSelection,productSelection,productName);
+    myProductFunction(data, prodDetailList)
   });
 }
 
@@ -75,7 +76,7 @@ function renderProdRecTable(prodListing){
 
   };
 
-  // Dynamic product search
+// Dynamic product search
 function myProductFunction() {
   var input, filter, table, selProd, filtProd, x;
   input = document.getElementById("inputProduct");
