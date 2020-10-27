@@ -8,9 +8,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from sqlalchemy.ext.declarative import declarative_base
 from flask import Flask, request, jsonify, render_template, redirect
-# import turicreate as tc
+import turicreate as tc
 
 # MODEL_PATH = '/mo'
+modelC = tc.load_model("drinkupiowa-C")
 
 app = Flask(__name__)
 
@@ -66,9 +67,12 @@ def get_recommendations():
     data = get_product_details(prod_list)
     return jsonify(data)
 
-@app.route("/get_recommendations_for_store/<store_id>", methods=['GET'])
+@app.route("/get_recommendations_for_store/<int:store_id>", methods=['GET'])
 def get_recommendations_for_store(store_id):
-    # call the model and get the recommendations  for user_id
+
+    users_to_recommend = tc.SArray([store_id])
+    data= modelC.recommend(users_to_recommend)
+    print(data)
     prod_list = []
     data = get_product_details(prod_list)
     return jsonify(data)    
