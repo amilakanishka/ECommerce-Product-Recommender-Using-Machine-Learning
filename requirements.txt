@@ -24,3 +24,12 @@ urllib3==1.25.11
 webdriver-manager==3.2.2
 Werkzeug==1.0.1
 wincertstore==0.2
+coremltools==3.3 
+gast==0.2.2 
+keras-applications==1.0.8 
+prettytable==0.7.2 
+resampy==0.2.1 
+tensorboard==2.0.2 
+tensorflow==2.0.3 
+tensorflow-estimator==2.0.1 
+turicreate==6.4.1

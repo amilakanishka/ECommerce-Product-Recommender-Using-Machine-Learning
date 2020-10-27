@@ -10,6 +10,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from flask import Flask, request, jsonify, render_template, redirect
 # import turicreate as tc
 
+# MODEL_PATH = '/mo'
+
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "postgresql://Jupyter_User:test@127.0.0.1/scikits_liqure_db"
