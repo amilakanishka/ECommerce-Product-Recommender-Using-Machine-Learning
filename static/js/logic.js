@@ -68,13 +68,14 @@ function renderProdRecTable(prodListing){
     rowDiv.appendChild(bootstrapDivLeft);
     rowDiv.appendChild(bootstrapDivRight);
 
-    // Then append the whole thing onto the test section
+    // Then append the whole thing onto the section
     document.getElementById('recommend-product').appendChild(containerDiv);
 
     
 
   };
 
+  // Dynamic product search
 function myProductFunction() {
   var input, filter, table, selProd, filtProd, x;
   input = document.getElementById("inputProduct");
