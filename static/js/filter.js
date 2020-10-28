@@ -44,7 +44,7 @@ selProd.onkeyup = function() {myProductFunction()};
 function myProductFunction() {
   
   // Declare variables
-  var input, filter, ul, option, txtValue;
+  var input, filter, ul, option;
   input = document.getElementById('product_name');
   filter = input.value.toLowerCase();
   ul = document.getElementById("productUL");
@@ -52,7 +52,7 @@ function myProductFunction() {
   
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < option.length; i++) {
-    txtValue = option[i].textContent || option[i].innerText;
+    var txtValue = option[i].textContent || option[i].innerText;
     if (txtValue.toLowerCase().indexOf(filter) > -1) {
       option[i].style.display = "";
     } else {
