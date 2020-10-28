@@ -105,7 +105,7 @@
         
                 <div class="card">
                     <h5>Product Category</h5>
-                    <input id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on" required="required">
+                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on" required="required">
                         <div id="catDiv">
                             <ul id="catUL">
                                 {% for p in prodCatList %}
@@ -113,18 +113,20 @@
                                 {% endfor %}
                             </ul>
                         </div>
+                        </select>
                 </div> 
 
                 <div class="card">
                     <h5>Product Name</h5>
-                    <input id="product_name" type="text" onkeyup="myProductFunction()" placeholder="Product Name" autocomplete="on" required="required">
+                    <select id="product_name" type="text" onkeyup="myProductFunction()" placeholder="Product Name" autocomplete="on" required="required">
                         <div id="prodDiv">
                             <ul id="productUL">
                                 {% for r in prodDetailList %}
                                 <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
                                 {% endfor %}
                             </ul>
-                        </div>  
+                        </div>
+                    </select>  
                 </div> 
                 
                 <div class="card">
