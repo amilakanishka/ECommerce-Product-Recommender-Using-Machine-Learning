@@ -107,32 +107,34 @@
 
                 <div class="card">
                     <h5>Customer ID</h5>
-                    <input class="form-control input" id="myInputID" type="search" onkeyup="myStoreFunction()" placeholder="Customer ID" autocomplete="off">
-                        <select name="store_number" id="customer_name">
+                    <input id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required">
+                    <div id="storeDiv">
+                        <ul id="storeUL">
                             {% for s in storeList %}
                             <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
                             {% endfor %}
-                        </select>
+                        </ul>
+                    </div>
                 </div>  
 
         
                 <div class="card">
                     <h5>Product Category</h5>
-                    <input class="form-control" id="myInputCategory" type="search" placeholder="Product Category" autocomplete="on">
-                        <select id="product_category">
+                    <input id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on" required="required">
+                        <div id="catDiv">
+                            <ul id="catUL">
                                 {% for p in prodCatList %}
                                 <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
                                 {% endfor %}
                                 <!-- Check this bit -  -->
-                        </select>
-                    </div>
-                <!-- </div>  -->
+                            </ul>
+                        </div>
+                </div> 
 
                 <div class="card">
                     <h5>Product Name</h5>
                     <input id="product_name" type="text" onkeyup="myProductFunction()" placeholder="Product Name" autocomplete="on" required="required">
                         <div id="prodDiv">
-                    <!-- <select id="product_name"> -->
                             <ul id="productUL">
                                 {% for r in prodDetailList %}
                                 <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
