@@ -44,11 +44,10 @@ selProd.onkeyup = function() {myProductFunction()};
 function myProductFunction() {
   
   // Declare variables
-  var input, filter, ul, option;
-  input = document.getElementById('product_name');
-  filter = input.value.toLowerCase();
-  ul = document.getElementById("productUL");
-  option = ul.getElementsByTagName('option');
+  var input = document.getElementById('product_name');
+  var filter = input.value.toLowerCase();
+  var ul = document.getElementById("productUL");
+  var option = ul.getElementsByTagName('option');
   
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < option.length; i++) {
