@@ -120,7 +120,8 @@ def get_product_categories():
 @app.route("/get_recommendations_for_product_selection/<int:item_id>", methods=['GET'])
 def get_recommendations_for_product_selection(item_id):
 
-    item_selected = tc.SArray([item_id])
+    item_selected = []
+    item_selected.append(item_id)
     data1 = modelC.recommend_from_interactions(item_selected)
     prod_list = []
     for prod in list(data1):
