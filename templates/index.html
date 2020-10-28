@@ -22,11 +22,8 @@
 
     <!-- Styles and scripts -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
-    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
     <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}" ></script>
-    <!-- <script src="js/script.js"></script>    -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/filter.js') }}"></script> 
-    <!-- <script src="js/filter.js"></script>  -->
 
     <!-- jQuery and Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -61,7 +58,7 @@
             <div class="row">
                 <div class="hero-text">
                     <div class="col-md-7">
-                        <h1>Scikick Iowa Alcohol Distributors</h1>
+                        <h1>Scikit Iowa Alcohol Distributors</h1>
                         <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
 
                         <h2>Creating Memories Together!<br><br></h2>
@@ -92,19 +89,6 @@
         <div class="container">
             <div class="card-deck">
                 <div class="card-btn text-center"></div>
-                <!-- <div class="card">
-                    <h5>Customer ID</h5>
-                    <div class="select-list">
-                      <div class="select-list-item"> 
-                        <select name="store_number" id="customer_name">
-                            {% for s in storeList %}
-                            <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
-                            {% endfor %}
-                        </select>
-                      </div>
-                    </div>
-                </div>   -->
-
                 <div class="card">
                     <h5>Customer ID</h5>
                     <input id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required">
@@ -126,7 +110,6 @@
                                 {% for p in prodCatList %}
                                 <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
                                 {% endfor %}
-                                <!-- Check this bit -  -->
                             </ul>
                         </div>
                 </div> 
@@ -141,8 +124,6 @@
                                 {% endfor %}
                             </ul>
                         </div>  
-                        <!-- Check this bit -  -->
-                    <!-- </select> -->
                 </div> 
                 
                 <div class="card">

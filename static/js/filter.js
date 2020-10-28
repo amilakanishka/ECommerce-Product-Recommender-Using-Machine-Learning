@@ -71,7 +71,24 @@ function myProductFunction() {
   
 }
 
+// Selecting the store dropdown option
+function handleOptionSelected(e){
+	toggleClass(e.target.parentNode, 'hide');			
 
+	const id = e.target.id;
+	const newValue = e.target.textContent + ' ';
+	const titleElem = document.querySelector('.card .store_number');
+	// const icon = document.querySelector('.card .store_number');
+
+
+	titleElem.textContent = newValue;
+	// titleElem.appendChild(icon);
+	
+	//trigger custom event
+	document.querySelector('..card .store_number').dispatchEvent(new Event('change'));
+	//setTimeout is used so transition is properly shown
+	// setTimeout(() => toggleClass(icon,'rotate-90',0));
+}
 
 
 
