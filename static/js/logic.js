@@ -4,97 +4,51 @@ function handleSubmit() {
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
-//   // Select the input value from the form
-//   var customerSelection = d3.select("#customer_name").node().value;
-//   var productSelection = d3.select("#product_category").node().value;
-//   var productName = d3.select("#product_name").node().value;
+// RECOMMENDER FUNCTION HERE
+// Iowa file path
+var iowaPath = "../static/data/iowa.csv" 
+d3.csv(iowaPath)
+  .then(data => {var iowaList = data;
+  console.log("iowaList");
+  console.log(iowaList);
 
-//   var url = `/get_recommendations/${customerSelection}/${productSelection}/${productName}`;
-//   d3.json(url).then(function(data) {
-//     renderProdRecTable(data,customerSelection,productSelection,productName);
-//     myProductFunction(data, productName)
-//   });
-// }
-
-// // Rendering the machine learned products XXXXXXXXX fix line 23 and 24
-// function renderProdRecTable(prodListing){
-//   d3.select("#recommend-product").selectAll("div").remove();
-//   var url = `/get_recommendations/${customerSelection}/${productSelection}/${productName}`;
-//   d3.json(url).then(function(productList) {
-//     prodListing = prodListing.filter(prod => prod.XXXXX);
-//     var loopMax = Math.min(prodListing.length, 5);
-//         for (i = 0; i < loopMax; i++) {
+  // TEMP ONLY - replace with recommender data later
+  // Place 8 products for now *** can change
+  for (i = 0; i < 8; i++) {
+    // Get data and insert into variable
+    var imageUrl = iowaList[i].image_url;
+    var productName = iowaList[i].item_description;
+    // Create container div for product detail
+    var containerDiv = document.createElement('div');
+    containerDiv.className = 'container';
     
-//     // Get data and insert into variable
-//     var itemDescription = prodListing[i].item_description;
-//     var itemCost = prodListing[i].item_cost;
-//     var itemImage = prodListing[i].item_url;
-
-//     // Create a div container to hold the product details
-//     var containerDiv = document.createElement('div');
-//     containerDiv.id = 'prod-container';
-//     containerDiv.className = 'container';
-
-//     // Create row div
-//     var rowDiv = document.createElement('div');
-//     rowDiv.className = 'row';
-
-//     // DIV FOR PRODUCT LISTING
-//     // Create div for bootstrap
-//     var bootstrapDivLeft = document.createElement('div');
-//     bootstrapDivLeft.id = 'insertRecommendationHere';
-//     bootstrapDivLeft.className = 'col-md-6 mx-auto';
-
-//     // Create h3 for product description
-//     var titleH3 =  document.createElement('h3');
-//     titleH3.innerText = itemDescription;
-
-//     // Create h3 for product cost
-//     var costH3 =  document.createElement('h3');
-//     costH3.innerText = itemCost;
-
-//     // DIV FOR IMAGE
-//     // Create div for bootstrap 
-//     var bootstrapDivRight = document.createElement('div');
-//     bootstrapDivRight.id = 'insertImageHere'+i;
-//     bootstrapDivRight.className = 'col-md-6 product-image';
-
-//     // Create h3 for product description
-//     var titleH3 =  document.createElement('src');
-//     titleH3.innerText = itemImage;
-
-//     // Append child 
-//     containerDiv.appendChild(rowDiv);
-//     rowDiv.appendChild(bootstrapDivLeft);
-//     rowDiv.appendChild(bootstrapDivRight);
-
-//     // Then append the whole thing onto the section
-//     document.getElementById('recommend-product').appendChild(containerDiv);
-
+    // // Create row div
+    // var rowDiv = document.createElement('div');
+    // rowDiv.className = 'row';
     
-
-//   };
-
-// Dynamic product search
-// function myProductFunction() {
-//   var input, filter, table, selProd, filtProd, x;
-//   input = document.getElementById("inputProduct");
-//   filter = input.value.toLowerCase();
-//   table = document.getElementById("productName");
-//   selProd = document.getElementById("product_name").value;
-
-//   for (x = 0; x < selProd.length; x++) {
-//     filtProd = selProd[x].getElementsByTagName("option")[0];
-//     if (filtProd) {
-//       if (filtProd.innerHTML.toLowerCase().indexOf(filter) > -1) {
-//         selProd[x].style.display = "";
-//       }
-//       else {
-//         selProd[x].style.display = "none";
-//       }
-//     }
-//   }
-// }
+    // DIV FOR PRODUCT LISTING
+    // Create div for bootstrap
+    var bootstrapDivLeft = document.createElement('div');
+    bootstrapDivLeft.id = 'insertProductHere';
+    bootstrapDivLeft.className = 'col-md-3 mx-auto';
+    // Create img for product image
+    var productImg = document.createElement('img');
+    productImg.src = imageUrl;
+    // Create h3 for product name
+    var titleH3 =  document.createElement('h3');
+    titleH3.innerText = productName;
+    
+    // Append child
+    // containerDiv.appendChild(rowDiv);
+    // rowDiv.appendChild(bootstrapDivLeft);
+    containerDiv.appendChild(bootstrapDivLeft);
+    bootstrapDivLeft.appendChild(productImg);
+    bootstrapDivLeft.appendChild(titleH3);
+    
+    // Then append the whole thing onto the recommend-product section
+    document.getElementById('recommend-product').appendChild(containerDiv);
+  }
+  })
 
 document.querySelector(document).ready(function(){
   document.querySelector("#product_name").addEventListener("keyup", function() {
