@@ -4,6 +4,8 @@ function handleSubmit() {
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
+
+
 // RECOMMENDER FUNCTION HERE
 // Iowa file path
 var iowaPath = "../static/data/iowa.csv" 
