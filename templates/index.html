@@ -88,12 +88,12 @@
 
         <div class="container">
             <div class="card-deck">
-                <div class="card-btn text-center"></div>
+                <div class="card-btn text-center">
                 <div class="card">
                     <h5>Customer ID</h5>
-                    <div class="dropdown"></div>
+                    <div class="dropdown">
                     <div id="myDropdown" class="dropdown-content">
-                        <input id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required" <i class="fa fa-angle-right"></i>>
+                        <input id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required">
                         <div id="storeDiv">
                             <ul id="storeUL">
                                 {% for s in storeList %}
@@ -135,7 +135,8 @@
                     <input class="form-control" id="myInputQuantity" type="text" placeholder="Quantity">
                         <div id="quantity">
                         </div>
-                </div> 
+                </div>
+            </div> 
             </div>
         </div>
 
