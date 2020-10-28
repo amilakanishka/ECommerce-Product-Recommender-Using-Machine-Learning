@@ -90,16 +90,19 @@
             <div class="card-deck">
                 <div class="card-btn text-center"></div>
                 <div class="card">
+                    <div class="dropdown">
                     <h5>Customer ID</h5>
-                    <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required" <i class="fa fa-angle-right"></i>>
-                    <div id="storeDiv">
-                        <ul id="storeUL">
-                            {% for s in storeList %}
-                            <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
-                            {% endfor %}
-                        </ul>
+                    <div id="myDropdown" class="dropdown-content">
+                        <input id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required" <i class="fa fa-angle-right"></i>>
+                        <div id="storeDiv">
+                            <ul id="storeUL">
+                                {% for s in storeList %}
+                                <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                </select>
+                </div>
                 </div>  
 
         
