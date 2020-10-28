@@ -77,18 +77,29 @@ function handleOptionSelected(e){
 
 	const id = e.target.id;
 	const newValue = e.target.textContent + ' ';
-	const titleElem = document.querySelector('.card .store_number');
-	// const icon = document.querySelector('.card .store_number');
+	const titleElem = document.querySelector('.store_number');
+	const icon = document.querySelector('.store_number .fa');
 
 
 	titleElem.textContent = newValue;
-	// titleElem.appendChild(icon);
+	titleElem.appendChild(icon);
 	
 	//trigger custom event
-	document.querySelector('..card .store_number').dispatchEvent(new Event('change'));
+	document.querySelector('.store_number').dispatchEvent(new Event('change'));
 	//setTimeout is used so transition is properly shown
-	// setTimeout(() => toggleClass(icon,'rotate-90',0));
+	setTimeout(() => toggleClass(icon,'rotate-90',0));
 }
+
+//get elements
+const dropdownTitle = document.querySelector('.store_number');
+const dropdownOptions = document.querySelectorAll('.store_number');
+
+//bind listeners to these elements
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+
+dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+
+// document.querySelector('.store_number').addEventListener('change',handleTitleChange);
 
 
 

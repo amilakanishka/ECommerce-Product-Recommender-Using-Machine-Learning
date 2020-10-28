@@ -247,7 +247,13 @@ h6 {
     background-color: #ddd;
     color: black;
   }
+  .rotate-90{
+    transform: rotate(90deg);
+  }
 
+  .hide {
+    max-height: 0 !important;
+}
 
 
   /* XXX. CARD STYLING */
