@@ -255,6 +255,10 @@ h6 {
     max-height: 0 !important;
 }
 
+.pointerCursor:hover{
+	cursor: pointer;
+}
+
 
   /* XXX. CARD STYLING */
 
