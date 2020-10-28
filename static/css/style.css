@@ -262,10 +262,10 @@ h6 {
 #store_number {
   box-sizing: border-box;
   /* background-image: url('searchicon.png'); */
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 14px;
-  padding: 10px 10px 10px 10px;
+  /* background-position: 14px 12px; */
+  /* background-repeat: no-repeat; */
+  font-size: 16px;
+  padding: 5px 5px 5px 5px;
   border: none;
   border-bottom: 1px solid #ddd;
 }
