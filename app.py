@@ -69,7 +69,8 @@ def get_recommendations():
 @app.route("/get_recommendations_for_store/<int:store_id>", methods=['GET'])
 def get_recommendations_for_store(store_id):
 
-    users_to_recommend = tc.SArray([store_id])
+    users_to_recommend = []
+    users_to_recommend.append(store_id)
     data1 = modelC.recommend(users_to_recommend)
     prod_list = []
     for prod in list(data1):
