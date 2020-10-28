@@ -38,9 +38,11 @@
 //     }
 //   }
 
+// Create event listener to tigger myProductFunction()
 var selProd = document.getElementById('product_name');
 selProd.onkeyup = function() {myProductFunction()};
 
+// Define function
 function myProductFunction() {
   
   // Declare variables
