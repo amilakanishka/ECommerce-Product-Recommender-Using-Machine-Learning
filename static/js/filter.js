@@ -8,8 +8,8 @@ function myStoreFunction() {
   // Declare variables
   var input = document.getElementById('store_number');
   var filter = input.value.toLowerCase();
-  var div = document.getElementById("myDropdown");
-  var ul = div.document.getElementById("storeUL");
+  // var div = document.getElementById("myDropdown");
+  var ul = document.getElementById("storeUL");
   var option = ul.getElementsByTagName('option');
   
   // Loop through all list items, and hide those who don't match the search query
