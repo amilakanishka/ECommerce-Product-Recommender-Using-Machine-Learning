@@ -42,7 +42,7 @@
 var selProd = document.getElementById('product_name');
 selProd.onkeyup = function() {myProductFunction()};
 
-// Define function
+// Define function to filter product name list on user input
 function myProductFunction() {
   
   // Declare variables
