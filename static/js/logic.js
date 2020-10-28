@@ -50,12 +50,12 @@ d3.csv(iowaPath)
   }
   })
 
-document.querySelector(document).ready(function(){
-  document.querySelector("#product_name").addEventListener("keyup", function() {
-    var value = document.querySelector(this).value.toLowerCase();
-    document.querySelector("#prodDiv *").filter(function() {
-      document.querySelector(this).toggle(document.querySelector(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-})
+// document.querySelector(document).ready(function(){
+//   document.querySelector("#product_name").addEventListener("keyup", function() {
+//     var value = document.querySelector(this).value.toLowerCase();
+//     document.querySelector("#prodDiv *").filter(function() {
+//       document.querySelector(this).toggle(document.querySelector(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// })
 }
