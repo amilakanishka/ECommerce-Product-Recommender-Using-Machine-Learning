@@ -38,7 +38,7 @@
 //     }
 //   }
 
-
+var selProd = document.getElementById('product_name');
 selProd.onkeyup = function() {myProductFunction()};
 
 function myProductFunction() {
