@@ -289,8 +289,10 @@ h6 {
 
   .containerProd {
     border: solid;
-    padding: 7px;
-    
+    border-color: #ddd;
+    padding: 10px;
+    width: 220px;
+
 
   }
 
