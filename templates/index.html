@@ -89,7 +89,7 @@
                 <div class="card-btn text-center">
                 <div class="card">
                     <h5>Customer Name</h5>
-                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required">
+                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on">
                         <div id="storeDiv">
                             <ul id="storeUL">
                                 {% for s in storeList %}
@@ -103,7 +103,7 @@
         
                 <div class="card">
                     <h5>Product Category</h5>
-                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on" required="required">
+                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on>
                         <div id="catDiv">
                             <ul id="catUL">
                                 {% for p in prodCatList %}
