@@ -273,7 +273,7 @@ h6 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.5s;
     font-size: 16px;
-    /* height: 80px; */
+    height: 150px;
   }
 
   .card:hover {
@@ -319,8 +319,8 @@ h6 {
   }
 
   .img {
-    max-height: 50px;
-    max-width: 50px;
+    max-height: 80px;
+    max-width: 80px;
   }
 
 
