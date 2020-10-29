@@ -2,7 +2,7 @@ d3.select("#submit").on("click", SaveItem);
 
 function SaveItem() {
     d3.event.preventDefault();
-    var productSelected = d3.select("#productUL").node().value; 		
+    var productSelected = d3.select('#productUL option:checked').text();		
     var qty = d3.select("#myInputQuantity").html(this.value);
 	localStorage.setItem(name, data);
 	doShowAll();
