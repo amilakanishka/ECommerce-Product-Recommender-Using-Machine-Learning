@@ -22,8 +22,6 @@
 
     <!-- Styles and scripts -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
-    <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}" ></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/filter.js') }}"></script> 
 
     <!-- jQuery and Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -33,7 +31,7 @@
     <title>Scikict Bottle Distributors</title>
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
   </head>
-  <body>
+  <body >
 
 <!-- START THE HEADER SECTION -->
     <header>
@@ -91,7 +89,7 @@
                 <div class="card-btn text-center">
                 <div class="card">
                     <h5>Customer Name</h5>
-                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on" required="required">
+                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on">
                         <div id="storeDiv">
                             <ul id="storeUL">
                                 {% for s in storeList %}
@@ -105,7 +103,7 @@
         
                 <div class="card">
                     <h5>Product Category</h5>
-                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on" required="required">
+                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on>
                         <div id="catDiv">
                             <ul id="catUL">
                                 {% for p in prodCatList %}
@@ -131,7 +129,7 @@
                 
                 <div class="card">
                     <h5>Quantity</h5>
-                    <input class="form-control" id="myInputQuantity" type="text" placeholder="Quantity">
+                    <input class="form-control" id="myInputQuantity" type="number" placeholder="Quantity">
                         <div id="quantity">
                         </div>
                 </div>
@@ -161,11 +159,23 @@
         <div class="container">
             <div class="row">
                 <div class="recommend-text">
-                    <h2>Before you finalise your order, you may want to consider these items.....</h2>
+                    <h2>Before you finalise your order, these are popular products.....</h2>
                     <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
                 </div>
                 <div id="recommend-product" class="row">
+                </div>
 
+                <div class="recommend-text">
+                    <h2>Before you finalise your order, you may like these.....</h2>
+                    <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
+                </div>
+                <div id="recommend-customer" class="row">
+                </div>
+                
+                <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">                
+                <div class="col-md-5">         
+                    <button id="submit" type="submit" href="/about" class="button-order button1">Proceed to checkout
+                    </button>
                 </div>
             </div>
         </div>
@@ -181,7 +191,15 @@
     <div class="container">
         <div class="row">
             <div class="hero-text">
-
+                <!-- FOR DEMO DAY -SHOPPING CART -->
+                <!-- <div id="items_table">
+                    <h3>Shopping List</h3>
+                    <table id=list></table>
+                    <p>
+                        <label><input type=button value="Clear" onclick="ClearAll()">
+                            <i>* Delete all items</i></label>
+                    </p>
+                </div> -->
                 <h2>Thank You For Your Order</h2>
                 <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#3a3a3a;border-radius:12px">
                 <p>Please Visit Us Again</p>
@@ -209,7 +227,9 @@
 <!-- FOOTER END-->
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script> 
-    <!-- <script src="js/filter.js"></script>  -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/cart.js') }}"></script>  -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}" ></script>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/filter.js') }}"></script>  -->
 
  
    

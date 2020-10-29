@@ -263,12 +263,17 @@ h6 {
 
   /* XXX. CARD STYLING */
 
+  .card-deck {
+    min-height: 320px;
+  }
+
   .card {
     background-color: #ddd;
     padding: 25px 25px, 15px 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.5s;
     font-size: 16px;
+    height: 110px;
   }
 
   .card:hover {
@@ -292,6 +297,7 @@ h6 {
     border-color: #ddd;
     padding: 10px;
     width: 250px;
+    height: 390px;
     display: flex;
     flex: row;
   }
@@ -302,7 +308,7 @@ h6 {
     clear: both;
   }
   
-  /* TEAM PHOTO STYLING */
+  /* IMAGE STYLING */
 
   .img-team{
     padding-top: 10px;
@@ -310,6 +316,11 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+  }
+
+  img {
+    max-height: 175px;
+    max-width: 175px;
   }
 
 

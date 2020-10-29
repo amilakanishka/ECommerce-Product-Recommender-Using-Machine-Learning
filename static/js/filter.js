@@ -107,13 +107,13 @@ d3.json(iowaPath)
 
     // Create container div for product detail
     var containerDiv = document.createElement('div');
-    containerDiv.className = 'col-md-3';
+    containerDiv.className = 'containerProd';
 
     // DIV FOR PRODUCT LISTING
     // Create div for bootstrap
     var bootstrapDivLeft = document.createElement('div');
     bootstrapDivLeft.id = 'insertProductHere';
-    bootstrapDivLeft.className = 'containerProd';
+    // bootstrapDivLeft.className = 'col-md-3';
 
     // Create img for product image
     var productImg = document.createElement('img');
