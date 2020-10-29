@@ -304,7 +304,7 @@ h6 {
     clear: both;
   }
   
-  /* TEAM PHOTO STYLING */
+  /* IMAGE STYLING */
 
   .img-team{
     padding-top: 10px;
@@ -312,6 +312,11 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+  }
+
+  .img {
+    max-height: 100px;
+    max-width: 100px;
   }
 
 
