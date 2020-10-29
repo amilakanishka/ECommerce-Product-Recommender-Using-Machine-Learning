@@ -7,11 +7,8 @@ function handleSubmit() {
 // Select the input value from the index.html
   var productSiteSelector = d3.select("#product_name").node().value; 
   var iowaPath = `/get_recommendations_for_product_selection/${productSiteSelector}`
-  console.log(productSiteSelector);
-  var alcoholIowa = d3.select("#product_name").property("value");
-  console.log(alcoholIowa);
 
-
+d3.select("recommend-product").html("");
 
 // RECOMMENDER FUNCTION HERE
 
