@@ -32,7 +32,7 @@ d3.csv(iowaPath)
     // Create div for bootstrap
     var bootstrapDivLeft = document.createElement('div');
     bootstrapDivLeft.id = 'insertProductHere';
-    bootstrapDivLeft.className = 'col-md-3 mx-auto';
+    bootstrapDivLeft.className = 'col-md-3';
     // Create img for product image
     var productImg = document.createElement('img');
     productImg.src = imageUrl;
