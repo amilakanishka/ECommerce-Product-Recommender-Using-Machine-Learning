@@ -1,7 +1,7 @@
 d3.select("#submit").on("click", handleSubmit);
 
 function handleSubmit() {
-//   // Prevent the page from refreshing
+// Prevent the page from refreshing
   d3.event.preventDefault();
 
 // Select the input value from the index.html
@@ -17,16 +17,6 @@ d3.select("#recommend-customer").html("");
 
 // Set global variable
 var iowaList;
-
-// If read from csv
-// var iowaPath = "../static/data/iowa.csv" 
-// d3.csv(iowaPath)
-//   .then(data => {var iowaList = data;
-
-// If read from Heroku json
-// Iowa file path
-// var iowaPath = `/get_recommendations_for_product_selection/${productSelection}`;
-// var iowaPath = `/get_recommendations_for_product_selection/966136`;
 
 d3.json(iowaPath)
   .then(data => {iowaList = data; 
