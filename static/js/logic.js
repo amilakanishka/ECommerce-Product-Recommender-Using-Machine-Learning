@@ -5,10 +5,10 @@ function handleSubmit() {
   d3.event.preventDefault();
 
 // Select the input value from the index.html
-  var productSiteSelector = d3.select("#productUl").node().value; 
+  var productSiteSelector = d3.select("#productUL").node().value; 
   var iowaPath = `/get_recommendations_for_product_selection/${productSiteSelector}`
   console.log(productSiteSelector);
-  var alcoholIowa = d3.select("#productUl").property("value");
+  var alcoholIowa = d3.select("#productUL").property("value");
   console.log(alcoholIowa);
 
 
