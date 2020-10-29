@@ -140,6 +140,7 @@ d3.json(iowaPath)
     // Append child
     containerDiv.appendChild(bootstrapDivLeft);
     bootstrapDivLeft.appendChild(productImg);
+    bootstrapDivLeft.appendChild(titleH5);
     bootstrapDivLeft.appendChild(categoryUl);
     bootstrapDivLeft.appendChild(priceUl);
     bootstrapDivLeft.appendChild(volumeUl);
