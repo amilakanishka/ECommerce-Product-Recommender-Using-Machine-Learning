@@ -87,7 +87,6 @@ var iowaPath = `/get_recommendations_for_product_selection/966136`;
 d3.json(iowaPath)
   .then(data => {var iowaList = data; 
 
-  
   console.log("iowaList");
   console.log(iowaList);
   
