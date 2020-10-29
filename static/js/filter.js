@@ -113,7 +113,7 @@ d3.json(iowaPath)
     // Create div for bootstrap
     var bootstrapDivLeft = document.createElement('div');
     bootstrapDivLeft.id = 'insertProductHere';
-    bootstrapDivLeft.className = 'col-md-5';
+    bootstrapDivLeft.className = 'col-md';
 
     // Create img for product image
     var productImg = document.createElement('img');
