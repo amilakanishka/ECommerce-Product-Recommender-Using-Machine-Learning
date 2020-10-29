@@ -130,16 +130,16 @@ d3.json(iowaPath)
     titleH5.innerText = productName;
 
     // Create ul for product category
-    var categoryUl =  document.createElement('span');
+    var categoryUl =  document.createElement('p');
     categoryUl.id = categoryNo;
     categoryUl.innerText = categoryName;
 
     // Create ul for price
-    var priceUl =  document.createElement('span');
+    var priceUl =  document.createElement('p');
     priceUl.innerText = `${formatter.price}`;
   
     // Create ul for volume
-    var volumeUl =  document.createElement('span');
+    var volumeUl =  document.createElement('p');
     volumeUl.innerText = `${volume} ml`;
 
 
