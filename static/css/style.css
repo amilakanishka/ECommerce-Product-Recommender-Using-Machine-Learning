@@ -263,6 +263,10 @@ h6 {
 
   /* XXX. CARD STYLING */
 
+  .card-deck {
+    min-height: 320px;
+  }
+
   .card {
     background-color: #ddd;
     padding: 25px 25px, 15px 15px;
