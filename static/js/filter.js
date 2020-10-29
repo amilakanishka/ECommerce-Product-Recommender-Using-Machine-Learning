@@ -105,13 +105,6 @@ d3.json(iowaPath)
     var price = iowaList[i].price; // for price
     var volume = iowaList[i].volume; // for volume
 
-    // Define transformation for price
-    const formatter = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 2
-    });
-
     // Create container div for product detail
     var containerDiv = document.createElement('div');
     containerDiv.className = 'container';
@@ -138,12 +131,11 @@ d3.json(iowaPath)
 
     // Create ul for price
     var priceUl =  document.createElement('p');
-    priceUl.innerText = `${formatter.price}`;
+    priceUl.innerText = `$${price.toFixed(2)}`;
   
     // Create ul for volume
     var volumeUl =  document.createElement('p');
     volumeUl.innerText = `${volume} ml`;
-
 
     // Append child
     containerDiv.appendChild(bootstrapDivLeft);
