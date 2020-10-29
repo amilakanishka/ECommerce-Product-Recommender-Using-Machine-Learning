@@ -73,7 +73,8 @@
 
 // RECOMMENDER FUNCTION HERE
 
-// Iowa file path
+// Set global variable
+var iowaList;
 
 // If read from csv
 // var iowaPath = "../static/data/iowa.csv" 
@@ -81,11 +82,12 @@
 //   .then(data => {var iowaList = data;
 
 // If read from Heroku json
+// Iowa file path
 // var iowaPath = `/get_recommendations_for_product_selection/${productSelection}`;
 var iowaPath = `/get_recommendations_for_product_selection/966136`;
 
 d3.json(iowaPath)
-  .then(data => {var iowaList = data; 
+  .then(data => {iowaList = data; 
 
   console.log("iowaList");
   console.log(iowaList);
