@@ -297,7 +297,7 @@ h6 {
     border-color: #ddd;
     padding: 10px;
     width: 250px;
-    height: 200px;
+    height: 390px;
     display: flex;
     flex: row;
   }
@@ -319,8 +319,8 @@ h6 {
   }
 
   .img {
-    max-height: 80px;
-    max-width: 80px;
+    max-height: 175px;
+    max-width: 175px;
   }
 
 
