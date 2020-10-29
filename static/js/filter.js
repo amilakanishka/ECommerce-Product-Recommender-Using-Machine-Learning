@@ -107,7 +107,7 @@ d3.json(iowaPath)
 
     // Create container div for product detail
     var containerDiv = document.createElement('div');
-    containerDiv.className = 'container';
+    containerDiv.className = 'containerProd';
 
     // DIV FOR PRODUCT LISTING
     // Create div for bootstrap
