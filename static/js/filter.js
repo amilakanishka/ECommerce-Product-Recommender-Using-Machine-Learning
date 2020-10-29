@@ -136,7 +136,7 @@ d3.json(iowaPath)
 
     // Create ul for price
     var priceUl =  document.createElement('span');
-    priceUl.innerText = formatter.price;
+    priceUl.innerText = `${formatter.price}`;
   
     // Create ul for volume
     var volumeUl =  document.createElement('span');
