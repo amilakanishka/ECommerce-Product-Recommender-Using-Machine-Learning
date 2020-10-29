@@ -35,3 +35,12 @@ function doShowAll() {
 		alert('Cannot save shopping list as your browser does not support HTML 5');
 	}
 }
+
+function CheckBrowser() {
+	if ('localStorage' in window && window['localStorage'] !== null) {
+		// we can use localStorage object to store data
+		return true;
+	} else {
+			return false;
+	}
+}
