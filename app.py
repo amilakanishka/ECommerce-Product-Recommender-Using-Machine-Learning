@@ -137,7 +137,18 @@ def team():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")     
+    return render_template("about.html")   
+
+@app.route("/get_recommendations_for_cart", methods=["POST"])
+def get_recommendations_for_cart():
+    items_selected = request.json   
+    data1 = modelC.recommend_from_interactions(items_selected)
+    prod_list = []
+    for prod in list(data1):
+        prod_list.append(prod['StockCode'])
+    
+    data = get_product_details(prod_list)
+    return jsonify(list(data))     
 
 if __name__ == '__main__':
     app.run()    
