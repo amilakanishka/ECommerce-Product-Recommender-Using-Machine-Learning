@@ -10,8 +10,8 @@ function handleSubmit() {
   var iowaPath = `/get_recommendations_for_product_selection/${productSiteSelector}`
   var iowaPath2 = `/get_recommendations_for_store/${customerSiteSelector}`
 
-d3.select("recommend-product").html("");
-d3.select("recommend-customer").html("");
+d3.select("#recommend-product").html("");
+d3.select("#recommend-customer").html("");
 
 // RECOMMENDER FUNCTION HERE
 
