@@ -295,12 +295,13 @@ h6 {
     display: flex;
     flex: row;
   }
-  
-  .clearfix {
-    overflow: auto;
+
+  .containerProd::after {
+    content: "";
+    display: table;
+    clear: both;
   }
-
-
+  
   /* TEAM PHOTO STYLING */
 
   .img-team{
