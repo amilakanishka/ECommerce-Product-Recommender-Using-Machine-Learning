@@ -15,7 +15,6 @@ function ClearAll() {
 }
 
 function doShowAll() {
-	if (CheckBrowser()) {
 		var key = "";
 		var list = "<tr><th>Item</th><th>Value</th></tr>\n";
 		var i = 0;
@@ -31,16 +30,4 @@ function doShowAll() {
 		//bind the data to html table
 		//you can use jQuery too....
 		document.getElementById('list').innerHTML = list;
-	} else {
-		alert('Cannot save shopping list as your browser does not support HTML 5');
-	}
-}
-
-function CheckBrowser() {
-	if ('localStorage' in window && window['localStorage'] !== null) {
-		// we can use localStorage object to store data
-		return true;
-	} else {
-			return false;
-	}
 }
