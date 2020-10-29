@@ -129,7 +129,7 @@ d3.json(iowaPath)
 
     // Create ul for price
     var priceUl =  document.createElement('ul');
-    priceUl.innerText = $`${price.toFixed(2)}`;
+    priceUl.innerText = price.formatMoney(2,".",",");
   
     // Create ul for volume
     var volumeUl =  document.createElement('ul');
