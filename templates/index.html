@@ -33,7 +33,7 @@
     <title>Scikict Bottle Distributors</title>
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
   </head>
-  <body>
+  <body onload="doShowAll()">
 
 <!-- START THE HEADER SECTION -->
     <header>
@@ -131,7 +131,7 @@
                 
                 <div class="card">
                     <h5>Quantity</h5>
-                    <input class="form-control" id="myInputQuantity" type="text" placeholder="Quantity">
+                    <input class="form-control" id="myInputQuantity" type="number" placeholder="Quantity">
                         <div id="quantity">
                         </div>
                 </div>
@@ -186,7 +186,14 @@
     <div class="container">
         <div class="row">
             <div class="hero-text">
-
+                <div id="items_table">
+                    <h3>Shopping List</h3>
+                    <table id=list></table>
+                    <p>
+                        <label><input type=button value="Clear" onclick="ClearAll()">
+                            <i>* Delete all items</i></label>
+                    </p>
+                </div>
                 <h2>Thank You For Your Order</h2>
                 <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#3a3a3a;border-radius:12px">
                 <p>Please Visit Us Again</p>
