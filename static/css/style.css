@@ -291,8 +291,9 @@ h6 {
     border: solid;
     border-color: #ddd;
     padding: 10px;
-    width: 220px;
-
+    width: 250px;
+    display: flex;
+    flex: row;
 
   }
 
@@ -332,7 +333,12 @@ h6 {
       display: block;
       text-align: left;
     }
+    .containerProd {
+      flex-direction: column;
+    }
   }
+
+
   
   #section {
     display: block;
