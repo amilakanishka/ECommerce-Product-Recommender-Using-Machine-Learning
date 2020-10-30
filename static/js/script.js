@@ -9,20 +9,33 @@ function myFunction() {
   } 
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.fontSize = "30px";
-  } else {
-    document.getElementById("header").style.fontSize = "90px";
-  }
-} 
+// function scrollFunction() {
+//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//     document.getElementById("header").style.fontSize = "30px";
+//   } else {
+//     document.getElementById("header").style.fontSize = "90px";
+//   }
+// } 
 
 //  Add smooth scrolling on button clicks
 function scrollWin() {
   window.scrollTo(0, 800);
 }
+
+function hideFunction() {
+  var x = document.getElementById("recommend");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+// ADDITION FOR DEMO DAY
 
 // Filtering cards
 // Select Customer
@@ -57,25 +70,3 @@ function scrollWin() {
 
 // 
 
-// https://www.w3schools.com/howto/howto_js_filter_table.asp 
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toLowerCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toLowerCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}

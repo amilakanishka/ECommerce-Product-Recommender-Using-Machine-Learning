@@ -308,7 +308,7 @@ h6 {
     clear: both;
   }
   
-  /* IMAGE STYLING */
+  /* IMAGE & OTHER STYLING */
 
   .img-team{
     padding-top: 10px;
@@ -321,6 +321,14 @@ h6 {
   img {
     max-height: 175px;
     max-width: 175px;
+  }
+
+  hr {
+    height:7.5px;
+    border-width:0;
+    color:#d3c5af;
+    background-color:#dda146;
+    border-radius:12px;
   }
 
 
