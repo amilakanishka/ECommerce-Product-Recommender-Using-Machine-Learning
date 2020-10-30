@@ -67,3 +67,4 @@ Please see the below image for how the Flask API and the project architechture.
 
 ### Web App
 
+The web app was built from scratch using HTML, CSS, Bootstrap & Javascript to make the calls on the Flask and then to the recommender.
