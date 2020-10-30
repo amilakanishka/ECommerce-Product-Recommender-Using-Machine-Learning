@@ -56,30 +56,26 @@ In the js folder, you will find:
 
 ![workflow](static/img/Bootcamp_workflow_final.png)
 
-In the js folder, you will find:
-- config.js - app with passwords
-- logic.js - code with the js functions rendering the visualisations
-- script.js
-
-
-### Snapshot of the toolbox used to build our app: ###
-
-![workflow](static/img/Bootcamp_workflow_final.png)
-
 ### The Data Source
 
 The was sourced from Google Cloud Platform.  The data "contains every wholesale purchase of liquor in the State of Iowa by retailers for sale to individuals since January 1, 2012. The State of Iowa controls the wholesale distribution of liquor intended for retail sale (off-premises consumption), which means this dataset offers a complete view of retail liquor consumption in the entire state. The dataset contains every wholesale order of liquor by all grocery stores, liquor stores, convenience stores, etc., with details about the store and location, the exact liquor brand and size, and the number of bottles ordered". ^
 
 ^ Google Cloud Console - Iowa Description of the data set, the [link is here](https://console.cloud.google.com/bigquery?project=elated-channel-281600&folder=&organizationId=&p=bigquery-public-data&d=iowa_liquor_sales&page=dataset).
 
-The data was extracted using BigQuery ready for ETL using Pandas in as a Jupyter Notebook.
+The data was extracted using BigQuery & postgerSQL to get ready for data cleaning using Pandas in as a Jupyter Notebook.
 
 ### Web Scraping
 
-
+Missing from the data were images to load up into the webpage.  These were scraped from the [Iowa Alcohol Beverage Division Shop](https://shop.iowaabd.com/) using Beautiful Soup and Selenium.
 
 ### Machine Learning
 
+
+### Flask Application & Architecture
+
+Please see the below image for how the Flask API and the project architechture.
+
+![architecture](static/img/Architecture.png)
 
 ### Web App
 
