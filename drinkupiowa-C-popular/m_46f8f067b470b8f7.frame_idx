@@ -1,0 +1,11 @@
+[sframe]
+version=0
+num_segments=0
+num_columns=2
+nrows=3711
+[column_names]
+0000=StockCode
+0001=prediction
+[column_files]
+0000=m_46f8f067b470b8f7.sidx:0
+0001=m_46f8f067b470b8f7.sidx:1
