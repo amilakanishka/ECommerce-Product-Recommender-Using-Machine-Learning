@@ -39,6 +39,24 @@ In the js folder, you will find:
 - logic.js - code with the js functions rendering the visualisations
 - script.js
 
+### To fire everything up....
+
+1. Clone this repository
+
+git clone https://github.com/amilakanishka/ECommerce-Product-Recommender-Using-Machine-Learning
+
+2. Check the requirements.txt
+
+$ pip install -r requirements.txt
+
+3. You may need to install a virtual machine, click here for instructions from .....
+
+4. Run the code - Google colab
+
+5. Deploy to Heroku
+
+6. Recommend till your hearts content
+
 ### Snapshot of the toolbox used to build our app: ###
 
 ![workflow](static/img/Bootcamp_workflow_final.png)
