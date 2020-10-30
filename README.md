@@ -2,11 +2,14 @@
 
 # Scikit Iowa Liquor Distributors
 
-## High Level PRoject Concept 
+## High Level Project Concept 
 Machine Learning Product Recommender for wholesale liquor outlets in Iowa USA.
 
 ## Successfully Completed
 Built and deployed working machine learning website based on data obtained from Google's machine learning public databases.
+
+## We App
+We have deployed onto Heroku, please follow the link to the [product recommender web app](https://scikits-liquor.herokuapp.com/).
 
 **Team members:**
 
