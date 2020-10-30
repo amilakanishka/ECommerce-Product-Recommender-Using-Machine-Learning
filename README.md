@@ -6,7 +6,7 @@
 Machine Learning Product Recommender for wholesale liquor outlets in Iowa USA.
 
 ## Successfully Completed
-Built and deployed working machine learning website based on data obtained from Google's machine learning public databases.
+Built and deployed working machine learning website with a personalised product recommender based on data obtained from Google's machine learning public databases.
 
 ## Web App
 We have deployed onto Heroku, please follow the link to the [product recommender web app](https://scikits-liquor.herokuapp.com/).
@@ -22,22 +22,9 @@ We have deployed onto Heroku, please follow the link to the [product recommender
 ### How to read our code: ###
 
 The repository contains the following folders:
-Data folder which contains the ETL solution on a Jupyter Notebook including the web-scraping
-Presentation folder contains the powerpoint presentation
+Data folder which contains the EDA on a Jupyter Notebook and a webscraping notebook.
+Presentation folder contains the powerpoint presentation.
 Folders containing Machine Learning notebooks and outputs 
-
-Flask application related files in the main Project folder.
-- app.py is the flask app which renders the data from the database
-- config.py which contations configurations
-- Procfile for Heroku deployment cnfigurations
-- requirements.txt with all the requirements for deployment on Heroku
-- a folder templates where sit the three webpages: index.html for the home page, about.html, team.html
-
-### How to read our code: ###
-
-The repository contains the following folders:
-Data folder which contains the ETL solution on a Jupyter Notebook
-Presentation folder contains the powerpoint presentation
 
 Flask application related files in the main Project_2 folder.
 - app.py is the flask app which renders the data from the database
@@ -70,6 +57,7 @@ Missing from the data were images to load up into the webpage.  These were scrap
 
 ### Machine Learning
 
+The machine learning library chosen was Turicreate.  This library was chosen as it is easy to use, fast and flexible.  It is predominately used for recommenders or image classification/similarity.
 
 ### Flask Application & Architecture
 
