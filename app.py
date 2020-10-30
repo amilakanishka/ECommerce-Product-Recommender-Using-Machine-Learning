@@ -151,17 +151,18 @@ def get_recommendations_for_cart():
     data = get_product_details(prod_list)
     return jsonify(list(data))     
 
-@app.route("/get_popularity_recommendations", methods=["GET"])
-def get_popularity_recommendations():
+@app.route("/get_popularity_recommendations/<int:store_id>", methods=["GET"])
+def get_popularity_recommendations(store_id):
 
-    data1 = modelPopular.recommend()
+    users_to_recommend = []
+    users_to_recommend.append(store_id)
+    data1 = modelPopular.recommend(users_to_recommend)
     prod_list = []
     for prod in list(data1):
-        if prod['StockCode'] not in prod_list:
-            prod_list.append(prod['StockCode'])
+        prod_list.append(prod['StockCode'])
     
     data = get_product_details(prod_list)
-    return jsonify(data)     
+    return jsonify(data)       
 
 if __name__ == '__main__':
     app.run()    
