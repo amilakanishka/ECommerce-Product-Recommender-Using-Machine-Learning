@@ -22,7 +22,7 @@ We have deployed onto Heroku, please follow the link to the [product recommender
 ### How to read our code: ###
 
 The repository contains the following folders:
-Data folder which contains the EDA on a Jupyter Notebook and a webscraping notebook.
+Data folder which contains the ETL on a Jupyter Notebook and a webscraping notebook.
 Presentation folder contains the powerpoint presentation.
 Folders containing Machine Learning notebooks and outputs 
 
