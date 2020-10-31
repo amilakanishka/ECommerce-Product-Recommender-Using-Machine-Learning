@@ -332,7 +332,8 @@ h6 {
     padding-bottom: 15px;
     display: block;
     width: 50%;
-    min-width: 400px;
+    min-width: 600px;
+    min-height: 500px;
   }
 
   img {
