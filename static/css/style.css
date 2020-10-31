@@ -274,7 +274,6 @@ h6 {
     transition: 0.5s;
     font-size: 16px;
     height: 110px;
-    min-width: 280px;
   }
 
   .card:hover {
