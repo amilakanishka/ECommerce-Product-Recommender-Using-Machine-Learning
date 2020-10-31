@@ -1,8 +1,12 @@
  /* INDEX */
  /* 1. Fonts, Images
- /* X Menu and navbar */
- /* X. Header */
- /* X. Media queries */
+ /* 2. Menu and navbar */
+ /* 3. Header */
+ /* 4. Selection */
+ /* 5. Buttons */
+ /* 6. Cards */
+ /* 7. Images */
+ /* 8. Media queries */
  
 
 /* 1. FONTS & IMAGES */
@@ -97,7 +101,7 @@ h6 {
     transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
 
-  /* 3. SECTIONS */
+  /* 4. SECTIONS */
   .hero1 {
     background-image: url(../img/bar2.png);
     padding-top: 80px;
@@ -198,7 +202,7 @@ h6 {
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
-/* XXX. BUTTONS */
+/* 5. BUTTONS */
 
   .button {
     border: none;
@@ -261,7 +265,7 @@ h6 {
 
   .show {display: block;}
 
-  /* XXX. CARD STYLING */
+  /* 6. CARD STYLING */
 
   .card-deck {
     min-height: 320px;
@@ -315,7 +319,7 @@ h6 {
 
 
   
-  /* IMAGE & OTHER STYLING */
+  /* 7. IMAGE & OTHER STYLING */
 
   .img-team{
     padding-top: 10px;
@@ -332,7 +336,7 @@ h6 {
     padding-bottom: 15px;
     display: block;
     width: 50%;
-    min-width: 600px;
+    min-width: 700px;
     min-height: 500px;
   }
 
@@ -350,7 +354,7 @@ h6 {
   }
 
 
- /* XXX. MEDIA QUERIES */
+ /* 8. MEDIA QUERIES */
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
   Show the link that contains should open and close the topnav (.icon) */
  @media screen and (max-width: 600px) {
