@@ -280,6 +280,15 @@ h6 {
     height: 110px;
   }
 
+  .card-team {
+    background-color: #ddd;
+    padding: 25px 25px, 15px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.5s;
+    font-size: 16px;
+    height: 300px;
+  } 
+
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
