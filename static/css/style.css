@@ -156,17 +156,17 @@ h6 {
     background-color: #fff5f0;
     padding-top: 80px;
     padding-bottom: 50px;
-    height: 300px;
+    min-height: 300px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
   .info2 {
-    background-color:#dda146;
+    background-color:#3a3a3a;
     padding-top: 80px;
     padding-bottom: 50px;
-    height: 300px;
+    min-height: 300px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
