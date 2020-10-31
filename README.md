@@ -35,7 +35,9 @@ We have deployed onto Heroku, please follow the link to the [product recommender
 The repository contains the following folders:
 Data folder which contains the ETL reference data loading and webscraping solution Jupyter Notebook.
 Presentation folder contains the powerpoint presentation.
-Folders containing Machine Learning notebooks and outputs 
+Folders containing Machine Learning notebooks and outputs:
+- ML creation, evaluation and EDA in folder 'ML Colab Notebook'. Filename: iowa_liquor_model_C
+- 2 final machine learning models saved in folders: 'drinkupiowa-C' for collaborative filtering model and 'drinkupiowa-C-popular' for popularity model
 
 Flask application related files in the main folder.
 - app.py is the flask app which renders the data from the database
@@ -44,7 +46,7 @@ Flask application related files in the main folder.
 - requirements.txt with all the requirements for deployment on Heroku
 - a folder templates where sit the three webpages: index.html for the home page, about.html, team.html
 - a folder static where sit: css/img/js
-- ML creation, evaluation and EDA in folder 'ML Colab Notebook'. Filename: iowa_liquor_model_C
+
 
 In the js folder, you will find:
 - config.js - app with passwords
