@@ -22,11 +22,11 @@ We have deployed onto Heroku, please follow the link to the [product recommender
 ### How to read our code: ###
 
 The repository contains the following folders:
-Data folder which contains the ETL on a Jupyter Notebook and a webscraping notebook.
+Data folder which contains the ETL reference data loading and webscraping solution Jupyter Notebook.
 Presentation folder contains the powerpoint presentation.
 Folders containing Machine Learning notebooks and outputs 
 
-Flask application related files in the main Project_2 folder.
+Flask application related files in the main folder.
 - app.py is the flask app which renders the data from the database
 - config.py which contations configurations
 - Procfile for Heroku deployment cnfigurations
@@ -49,9 +49,10 @@ git clone https://github.com/amilakanishka/ECommerce-Product-Recommender-Using-M
 
 $ pip install -r requirements.txt
 
-3. You may need to install a virtual machine, click here for instructions from .....
+3. You may need to install a virtual machine if you are on windows environment, click here for instructions from .....
 
 4. Run the code - Google colab
+   In order to query the Google Public Data set 'Iowa Liquor Retail Sales' via the Google colab, you need to create a Project_ID at Google Cloud Platform (https://console.cloud.google.com/cloud-resource-manager) and pass the project_ID via Google colab at the point querying the dataset and loading to the dataframe.
 
 5. Deploy to Heroku
 
