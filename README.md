@@ -29,10 +29,11 @@ Folders containing Machine Learning notebooks and outputs
 Flask application related files in the main folder.
 - app.py is the flask app which renders the data from the database
 - config.py which contations configurations
-- Procfile for Heroku deployment cnfigurations
+- Procfile for Heroku deployment configurations
 - requirements.txt with all the requirements for deployment on Heroku
 - a folder templates where sit the three webpages: index.html for the home page, about.html, team.html
 - a folder static where sit: css/img/js
+- ML creation, evaluation and EDA in folder 'ML Colab Notebook'. Filename: iowa_liquor_model_C
 
 In the js folder, you will find:
 - config.js - app with passwords
@@ -49,7 +50,7 @@ git clone https://github.com/amilakanishka/ECommerce-Product-Recommender-Using-M
 
 $ pip install -r requirements.txt
 
-3. You may need to install a virtual machine if you are on windows environment, click here for instructions from .....
+3. You may need to install a Windows Subsystem for Linux (WSL) if you are on windows environment, [click here for instructions](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 4. Run the code - Google colab
    In order to query the Google Public Data set 'Iowa Liquor Retail Sales' via the Google colab, you need to create a Project_ID at Google Cloud Platform (https://console.cloud.google.com/cloud-resource-manager) and pass the project_ID via Google colab at the point querying the dataset and loading to the dataframe.
@@ -76,7 +77,13 @@ Missing from the data were images to load up into the webpage.  These were scrap
 
 ### Machine Learning
 
-The machine learning library chosen was Turicreate.  This library was chosen as it is easy to use, fast and flexible.  It is predominately used for recommenders or image classification/similarity.
+The machine learning library chosen was Turicreate.  This library was chosen as it is easy to use, fast and flexible.  It is predominately used for recommenders or image classification/similarity. We have used both popularity and collaborative filtering in building our machine learning models.
+
+[Popularity](static/img/popularity_git.jpeg)
+
+[Collaborative_Filtering](static/img/collaborative_filtering_git.jpeg)
+
+
 
 ### Flask Application & Architecture
 
