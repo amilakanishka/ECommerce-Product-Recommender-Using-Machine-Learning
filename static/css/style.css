@@ -307,6 +307,13 @@ h6 {
     display: table;
     clear: both;
   }
+
+  .recommend-text {
+    padding-top: 15px;
+    padding-bottom:15px;
+  }
+
+
   
   /* IMAGE & OTHER STYLING */
 
