@@ -79,9 +79,9 @@ Missing from the data were images to load up into the webpage.  These were scrap
 
 The machine learning library chosen was Turicreate.  This library was chosen as it is easy to use, fast and flexible.  It is predominately used for recommenders or image classification/similarity. We have used both popularity and collaborative filtering in building our machine learning models.
 
-[Popularity](static/img/popularity_git.jpeg)
+![Popularity](static/img/popularity_git.jpeg)
 
-[Collaborative_Filtering](static/img/collaborative_filtering_git.jpeg)
+![Collaborative_Filtering](static/img/collaborative_filtering_git.jpeg)
 
 
 
