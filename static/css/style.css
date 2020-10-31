@@ -333,10 +333,11 @@ h6 {
 
   .img-team{
     padding-top: 10px;
-    width: 100%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+    min-width: fit-content;
   }
 
   .img-project{
