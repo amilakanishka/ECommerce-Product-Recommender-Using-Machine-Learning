@@ -328,10 +328,11 @@ h6 {
 
   .img-project{
     padding-top: 15px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 15px;
+    display: block;
+    width: 50%;
   }
 
   img {
