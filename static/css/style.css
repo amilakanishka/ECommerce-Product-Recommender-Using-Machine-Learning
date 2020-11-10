@@ -70,7 +70,8 @@ h6 {
     text-align: center;
     padding: 17px 17px;
     font-size: 20px;
-    margin-left: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 18px; 
@@ -97,7 +98,7 @@ h6 {
   /* 3. HEADER STYLE */
   #header {
     background-color: #fff5f0; /* Background Colour */
-    padding: 20px 20px; /* Some padding */
+    padding: 30px 30px; /* Some padding */
     color: black;
     position: fixed; /* Fixed position - sit on top of the page */
     top: 0;
@@ -129,7 +130,7 @@ h6 {
   .order {
     background-color: #3a3a3a;
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     min-height: 500px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -225,6 +226,15 @@ h6 {
   .button1 {
     background-color: #dda146; 
     color: white; 
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 18px;
   }
 
   .button1:hover {
@@ -269,17 +279,18 @@ h6 {
 
   .show {display: block;}
 
-  /* 6. CARD STYLING */
+  /* 6A. CARD STYLING */
 
   .card-deck {
     min-height: 320px;
+    min-width: 400px;
   }
 
   .card {
-    background-color: #ddd;
+    background-color: #3a3a3a;
     padding: 25px 25px, 15px 15px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-    transition: 0.5s;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.5s; */
     font-size: 16px;
     height: 110px;
   }
@@ -294,7 +305,7 @@ h6 {
     min-width: 350px;
   } 
 
-  .card:hover {
+  .card-team:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
   }
 
@@ -307,7 +318,7 @@ h6 {
     border-radius: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .containerProd {
@@ -329,6 +340,64 @@ h6 {
   .recommend-text {
     padding-top: 15px;
     padding-bottom:15px;
+  }
+
+  .form-control {
+    border-radius: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+
+  /* 6B SHOPPING CART STYLING */
+
+  #list {
+    /* border: solid; */
+    /* border-color: #ddd; */
+    padding: 10px;
+    width: 350px;
+    height: 430px;
+    display: flex;
+    flex: row;
+  }
+
+  .items_table{
+    float: right;
+    color: #ddd;
+    
+  }
+
+  .table {
+    width: 100%;
+    padding: 15px;
+    border-spacing: 5px;
+    background-color: #ddd;
+
+  }
+
+  .tbody {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .th {
+    height: 25px;
+    padding-bottom: 5px;
+  }
+
+  .tr {
+    height: 20px;
+    padding-bottom: 5px;
+  }
+  
+  .td {
+    text-align: right;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .td.first {
+    text-align: left;
   }
 
 
@@ -404,6 +473,8 @@ h6 {
   #section {
     display: block;
   }
+
+
 
 /* Test CSS for Product Name */
 

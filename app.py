@@ -40,7 +40,11 @@ def home():
     storeResults = session.query(Store_Details.store_number,Store_Details.store_name).all()
     prodCatResutls = session.query(Product_Catogory.category, Product_Catogory.category_name).all()
     session.close()
-    storeList = []    
+    storeList = [] 
+    store = {}
+    store["store_number"] = 1
+    store["store_name"] = 'New Store'    
+    storeList.append(store)
     for store_number,store_name in storeResults:
         store = {}
         store["store_number"] = store_number
@@ -71,7 +75,8 @@ def get_recommendations():
 def get_recommendations_for_store(store_id):
 
     users_to_recommend = []
-    users_to_recommend.append(store_id)
+    if store_id != 1:
+        users_to_recommend.append(store_id)
     data1 = modelC.recommend(users_to_recommend)
     prod_list = []
     for prod in list(data1):
@@ -117,20 +122,37 @@ def get_product_categories():
         cate["category_name"] = category_name             
         prodCat.append(cate)    
 
-    return jsonify(prodCat)  
+    return jsonify(prodCat)   
 
-@app.route("/get_recommendations_for_product_selection/<int:item_id>", methods=['GET'])
-def get_recommendations_for_product_selection(item_id):
+@app.route("/get_product_category_details", methods=['GET'])
+def get_product_category_details():
+
+    product_list = []
+    prodDetailList = get_product_details(product_list)   
+
+    prodCat = []
+    for prod in prodDetailList:
+        cate = {}
+        cate["category"] = prod['category']
+        cate["item_number"] = prod['item_number']   
+        cate["item_description"] = prod['item_description']            
+        prodCat.append(cate)    
+
+    return jsonify(prodCat)          
+
+@app.route("/get_recommendations_for_products_selection/<item_ids>", methods=['GET'])
+def get_recommendations_for_products_selection(item_ids):
 
     item_selected = []
-    item_selected.append(item_id)
+    for i in item_ids.split(','):
+        item_selected.append(int(i))
     data1 = modelC.recommend_from_interactions(item_selected)
     prod_list = []
     for prod in list(data1):
         prod_list.append(prod['StockCode'])
     
     data = get_product_details(prod_list)
-    return jsonify(list(data))          
+    return jsonify(list(data))       
 
 @app.route("/team")
 def team():
