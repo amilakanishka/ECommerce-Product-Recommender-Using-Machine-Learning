@@ -43,6 +43,7 @@
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
                 </a>
+                
             </div> 
         </div>
     </header> 
@@ -72,83 +73,115 @@
 
 <!-- SECTION 2 - ORDERING -->
 
-    <section class="order">
-        <div class="container">
-            <div class="row">
-                <div class="hero-text">
-                    <div class="col-md-12">
+<section class="order">
+    <div class="container">
+        <div class="row">
+            <div class="hero-text">
+                <div class="row">
+                    <div class="col-md-6">
                         <h2>Place Your Order Here</h2>
                         <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
-                    </div>                
-                </div>
+
+                        <div class="container">
+                            <div class="card-deck">
+                                <div class="card-btn text-center">
+                                <div class="card">
+                                    <h5>Customer Name</h5>
+                                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on">
+                                        <div id="storeDiv">
+                                            <ul id="storeUL">
+                                                {% for s in storeList %}
+                                                <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                        </select>
+                                </div>  
+            
+                        
+                                <div class="card">
+                                    <h5>Product Category</h5>
+                                    <select id="product_category" type="text" onchange="displayAccordingly()" placeholder="Category" autocomplete="on">
+                                        <div id="catDiv">
+                                            <ul id="catUL">
+                                                <option selected></option>
+                                                {% for p in prodCatList %}
+                                                <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </select>
+                                </div> 
+            
+                                <div class="card">
+                                    <h5>Product Name</h5>
+                                    <select id="product_name" type="text" onkeyup="myProductFunction()" placeholder="Product Name" autocomplete="on" required="required">
+                                        <div id="prodDiv">
+                                            <ul id="productUL">
+                                                <option selected></option>
+                                            </ul>
+                                        </div>
+                                    </select>  
+                                </div> 
+                                
+                                <div class="card">
+                                    <h5>Quantity</h5>
+                                    <input class="form-control" id="myInputQuantity" type="number" placeholder="Quantity">
+                                        <div id="quantity">
+                                        </div>
+                                </div>
+                            </div> 
+                            </div>
+                        </div>
+            
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <!-- <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px"> -->
+                                    <button id="submit" type="submit" class="button-order button1">Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHOPPING CART -->
+
+                    <div class="col-md-6">
+                        <div class="hero-text">
+                        <div class="container">
+                            <div id="items_table">
+                                <h2>Your Shopping List</h2>
+                                <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
+                                <h4>
+                                <table id=list></table>
+                                </h4>
+                            </div>
+                            <!-- <input type="button" value="Clear" onclick="ClearAll()"> -->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <button id="submit" type="submit" class="button-order button1" onclick="ClearAll()">Clear Cart
+                                    </button>
+                                    <!-- <input type="button" value="Checkout"> -->
+
+                                    <button class="button-order button1" value="Checkout">Checkout
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- END SHOPPING CART -->
+
+
+    
+                <!-- </div>                -->
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="container">
-            <div class="card-deck">
-                <div class="card-btn text-center">
-                <div class="card">
-                    <h5>Customer Name</h5>
-                        <select id="store_number" type="text" onkeyup="myStoreFunction()" placeholder="Store" autocomplete="on">
-                        <div id="storeDiv">
-                            <ul id="storeUL">
-                                {% for s in storeList %}
-                                <option value="{{ s['store_number'] }}">{{ s['store_name'] }}</option>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        </select>
-                </div>  
-
-        
-                <div class="card">
-                    <h5>Product Category</h5>
-                    <select id="product_category" type="text" onkeyup="myCategoryFunction()" placeholder="Category" autocomplete="on>
-                        <div id="catDiv">
-                            <ul id="catUL">
-                                {% for p in prodCatList %}
-                                <option value="{{ p['category'] }}">{{ p['category_name'] }}</option>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        </select>
-                </div> 
-
-                <div class="card">
-                    <h5>Product Name</h5>
-                    <select id="product_name" type="text" onkeyup="myProductFunction()" placeholder="Product Name" autocomplete="on" required="required">
-                        <div id="prodDiv">
-                            <ul id="productUL">
-                                {% for r in prodDetailList %}
-                                <option value="{{ r['item_number'] }}">{{ r['item_description'] }}</option>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </select>  
-                </div> 
-                
-                <div class="card">
-                    <h5>Quantity</h5>
-                    <input class="form-control" id="myInputQuantity" type="number" placeholder="Quantity">
-                        <div id="quantity">
-                        </div>
-                </div>
-            </div> 
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
-                    <button id="submit" type="submit" class="button-order button1">Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-    </section>
 
 <!-- SECTION 2 - ORDERING END-->
 
@@ -158,44 +191,41 @@
         <div id="scroll_2">
             <div class="container">
                 <div class="row">
-                    <div class="recommend-text">
-                        <h1>You might like to consider</h1>
-                        <br>
-                        <h2>These items are recommended based on your product choice.....</h2>
-                        <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
-                    </div>
+                    <div id="recommend-product-head">
+                        <div class="recommend-text">
+                            <h2>You might like to consider</h2>
+                            <br>
+                            <h3>These items are recommended based on your product choice.....</h3>
+                            <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
+                        </div>
 
-                    <div id="recommend-product" class="row">
-                    </div>
-
-                    <div class="recommend-text">
-                        <br>
-                        <h2>These items are based on customer choices.....</h2>
-                        <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
-                    </div>
-
-                    <div id="recommend-customer" class="row">
-                    </div>
-                    <br>
-
-                    <div class="recommend-text">
-                        <br>
-                        <h2>These are the best selling items.....</h2>
-                        <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
-                    </div>
-
-                    <div id="recommend-popular" class="row">
-                    </div>
-                
-                    <hr>
-                    <br>
-                    
-                    <div class="recommend-text">
-                        <div class="col-md-5">
-                            <button id="submit" type="submit" href="/about" class="button-order button1">Proceed to checkout
-                            </button>
+                        <div id="recommend-product" class="row">
                         </div>
                     </div>
+                    <div id="recommend-customer-head">
+                        <div class="recommend-text">
+                            <br>
+                            <h3>These items are based on customer choices.....</h3>
+                            <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
+                        </div>
+
+                        <div id="recommend-customer" class="row">
+                        </div>
+                    </div>
+                    <br>
+                    <div id="recommend-popular-head">
+                        <div class="recommend-text">
+                            <br>
+                            <h3>These are the best selling items.....</h3>
+                            <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#dda146;border-radius:12px">
+                        </div>
+
+                        <div id="recommend-popular" class="row">
+                        </div>
+                    
+                        <hr>
+                        <br> 
+                    </div>                   
                 </div>
             </div>
         </div>
@@ -210,16 +240,6 @@
     <div class="container">
         <div class="row">
             <div class="hero-text">
-                <!-- FOR DEMO DAY -SHOPPING CART -->
-                <!-- <div id="items_table">
-                    <h3>Shopping List</h3>
-                    <table id=list></table>
-                    <p>
-                        <label><input type=button value="Clear" onclick="ClearAll()">
-                            <i>* Delete all items</i></label>
-                    </p>
-                </div> -->
-                <!-- END SHOPPING CART -->
                 <h2>Thank You For Your Order</h2>
                 <hr style="height:7.5px;border-width:0;color:#d3c5af;background-color:#3a3a3a;border-radius:12px">
                 <p>Please Visit Us Again</p>
@@ -251,7 +271,6 @@
 <!-- FOOTER END-->
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script> 
-    <script type="text/javascript" src="{{ url_for('static', filename='js/cart.js') }}"></script> 
     <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}" ></script>
 
  
